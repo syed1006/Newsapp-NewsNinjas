@@ -8,7 +8,13 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<NewsContainer/>} />
+      <Route exact path='/' element={<NewsContainer category='general'  key='general'/>} />
+      <Route exact path='/business' element={<NewsContainer category='business' key='business' />} />
+      <Route exact path='/entertainment' element={<NewsContainer category='entertainment' key='entertainment'/>} />
+      <Route exact path='/health' element={<NewsContainer category='health' key='health'/>} />
+      <Route exact path='/sports' element={<NewsContainer category='sports' key='sports'/>} />
+      <Route exact path='/science' element={<NewsContainer category='science' key='science'/>} />
+      <Route exact path='/technology' element={<NewsContainer category='technology' key='technology'/>} />
     </Routes>
     </BrowserRouter>
   );

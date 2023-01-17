@@ -4,7 +4,7 @@ import './NewsItem.css'
 function NewsItem({article}){
   return (
     <div className="item">
-        <h5 className="source">{article.source.name?article.source.name:"unknown"}</h5>
+        {article.source ? <h5 className="source">{article.source.name?article.source.name:"unknown"}</h5>:<h5 className="source">unknown</h5>}
         <div className="image">
             <img src={article.urlToImage} alt="news to show" />
         </div>
@@ -14,7 +14,7 @@ function NewsItem({article}){
             <p className='published'>{article.publishedAt}</p>
         </section>
         <section className="btns">
-            <a href={article.url} className="more">read more</a>
+            <a href={article.url} className="more" target='_blank'>read more</a>
         </section>
     </div>
   )
