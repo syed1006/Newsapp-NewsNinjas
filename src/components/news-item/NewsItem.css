@@ -1,0 +1,36 @@
+.item{
+    position: relative;
+    width: 30vw;
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 5px;
+
+}
+.image > img{
+    width: 100%;
+}
+.btns > a{
+    display: flex;
+    text-decoration: none;
+    width: 5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.source{
+    padding: 7px;
+    font-size: 1rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
