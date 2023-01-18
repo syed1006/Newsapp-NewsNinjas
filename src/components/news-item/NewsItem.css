@@ -1,15 +1,18 @@
 .item{
     position: relative;
     width: 30vw;
+    min-width: 300px;
     padding: 5px;
     margin: 5px;
     box-sizing: border-box;
     border: 2px solid grey;
     border-radius: 5px;
+    background-color: #E9F1FA;
 
 }
 .image > img{
     width: 100%;
+    height:300px;
 }
 .btns > a{
     display: flex;
@@ -33,4 +36,10 @@
     background-color: red;
     color: white;
     border-radius: 5px;
+}
+
+
+.description, .published{
+    
+    font-family: 'Ubuntu', sans-serif;
 }
