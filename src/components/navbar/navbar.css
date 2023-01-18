@@ -2,6 +2,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 1;
+    margin-bottom: 20px;
 }
 .header{
     height: 5rem;
@@ -13,6 +14,7 @@ header{
 
 .logo{
     font-size: 3rem;
+    font-family: 'Ruslan Display', 'cursive';
 }
 
 .logo>span{
@@ -29,8 +31,28 @@ header{
 .cat-con > .category> a{
     text-decoration: none;
     font-size: 1.5rem;
+    color: #c5c5c6;
 }
 
-.active{
+.active > a{
     font-weight: bold;
+    color: #E9F1FA !important;
+}
+
+.header-light{
+    background-color: #00ABE4
+}
+
+#dm-logo{
+    width: 32px;
+}
+.dm-btn > label{
+    color: white;
+}
+.dm-btn{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }

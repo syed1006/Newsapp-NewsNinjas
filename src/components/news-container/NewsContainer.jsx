@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component';
 import NewsItem from '../news-item/NewsItem'
 import './NewsContainer.css'
-const dotenv = require('dotenv');
-dotenv.config()
+
 
 function NewsContainer({ category }) {
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.REACT_APP_API_KEY;
     let art = [];
     const pageSize = 9;
     let data;
@@ -45,7 +44,7 @@ function NewsContainer({ category }) {
         >
             <div className="container">
               {state.articles.map((article) => {
-                return <NewsItem article={article} />
+                return <NewsItem article={article} key={article.url}/>
               })}
             </div>
         </InfiniteScroll>
