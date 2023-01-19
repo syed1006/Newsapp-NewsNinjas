@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import NewsContext from '../../context/NewsContext/NewsContext';
 import './NewsItem.css'
 
 function NewsItem({article}){
+  const context = useContext(NewsContext);
+  const {state: {theme}} = context;
   return (
-    <div className="item">
+    <div className={`item ${theme?'dark-theme':''}`}>
         {article.source ? <h5 className="source">{article.source.name?article.source.name:"unknown"}</h5>:<h5 className="source">unknown</h5>}
         <div className="image">
             <img src={(article.urlToImage)?article.urlToImage:'https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'} alt="news to show" />
@@ -14,7 +17,7 @@ function NewsItem({article}){
             <p className='published'>{article.publishedAt}</p>
         </section>
         <section className="btns">
-            <a href={article.url} className="more" target='_blank'>read more</a>
+            <a href={article.url} className="more" target='_blank' rel="noreferrer">read more</a>
         </section>
     </div>
   )

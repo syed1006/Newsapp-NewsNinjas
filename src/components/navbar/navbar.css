@@ -34,7 +34,11 @@ header{
     color: #c5c5c6;
 }
 
-.active > a{
+.active-light > a{
+    font-weight: bold;
+    color: black !important;
+}
+.active-dark > a{
     font-weight: bold;
     color: #E9F1FA !important;
 }
@@ -43,12 +47,14 @@ header{
     background-color: #00ABE4
 }
 
+.header-dark{
+    background-color: black;
+    color: #2272FF;
+}
 #dm-logo{
     width: 32px;
 }
-.dm-btn > label{
-    color: white;
-}
+
 .dm-btn{
     margin-left: 30px;
     display: flex;
